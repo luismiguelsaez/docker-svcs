@@ -22,7 +22,7 @@ def main():
     if "REQ_ENDPOINT" not in environ:
         REQ_ENDPOINT = "https://ifconfig.co/ip"
     else:
-        REQ_ENDPOINT = environ["REQ_ENVIRON"]
+        REQ_ENDPOINT = environ["REQ_ENDPOINT"]
 
     while True:
         res = requests.get("https://ifconfig.co/ip")
