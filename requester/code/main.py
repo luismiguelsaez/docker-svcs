@@ -25,7 +25,7 @@ def main():
         REQ_ENDPOINT = environ["REQ_ENDPOINT"]
 
     while True:
-        res = requests.get("https://ifconfig.co/ip")
+        res = requests.get(REQ_ENDPOINT)
         if res.status_code == 200:
             logger.info("Request successful with HTTP code " + str(res.status_code) + ": " + res.text.strip() )
         else:
